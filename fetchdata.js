@@ -122,7 +122,6 @@ _Request.prototype._fetch_request = async function(newRequest, optbodys = {}) {
         console.log(e);
         Toast.info("服务器繁忙，请稍后重试~", 1.5);
       })
-      .done();
     clearInterval(setTime);
     if (time > 3) Toast.hide();
     return resjson;
