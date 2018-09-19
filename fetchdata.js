@@ -229,15 +229,15 @@ FetchData.fn.extend({
    */
   get: function(url, reqBodyParms) {
     let optheaders = _headers({ head: this.options.head });
-    FetchData.get(url, reqBodyParms, optheaders, this.options.body);
+    return FetchData.get(url, reqBodyParms, optheaders, this.options.body);
   },
   post: function(url, reqBodyParms) {
     let optheaders = _headers({ head: this.options.head, reqBodyParms });
-    FetchData.post(url, reqBodyParms, optheaders, this.options.body);
+    return FetchData.post(url, reqBodyParms, optheaders, this.options.body);
   },
   put: function(url, reqBodyParms) {
     let optheaders = _headers({ head: this.options.head, reqBodyParms });
-    FetchData.put(url, reqBodyParms, optheaders, this.options.body);
+    return FetchData.put(url, reqBodyParms, optheaders, this.options.body);
   }
 });
 FetchData.extend({
